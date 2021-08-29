@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - ./:/app
+    restart: always
+    environment:
+      IP: "${IP}"
+      SUBJECT_NAME: "${SUBJECT_NAME}"
+      DELAY_SEC: "${DELAY_SEC}"
+      TOKEN: "${TOKEN}"
+      CHAT_ID: "${CHAT_ID}"
